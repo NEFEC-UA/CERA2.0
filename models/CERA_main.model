@@ -1,0 +1,881 @@
+{
+    "values": {
+        "inputs": {
+            "numberofstorms": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 629.0, 
+                            "x": 105.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "numberofstorms", 
+                            "min": null, 
+                            "default": 0, 
+                            "max": null, 
+                            "value": 0, 
+                            "hidden": false, 
+                            "isInteger": true, 
+                            "optional": false, 
+                            "description": "Number of Storms"
+                        }, 
+                        "class": "processing.core.parameters.ParameterNumber"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "attachedstructures": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 144.0, 
+                            "x": 105.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "attachedstructures", 
+                            "shapetype": [
+                                1
+                            ], 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Attached structures"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "pependicularstrucutures": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 103.0, 
+                            "x": 105.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "pependicularstrucutures", 
+                            "shapetype": [
+                                1
+                            ], 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Pependicular strucutures"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "shoreline": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 353.0, 
+                            "x": 105.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "shoreline", 
+                            "shapetype": [
+                                1
+                            ], 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Shoreline position"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "ecology1to3": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 269.0, 
+                            "x": 104.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "ecology1to3", 
+                            "showSublayersDialog": true, 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Ecology (1 to 3)"
+                        }, 
+                        "class": "processing.core.parameters.ParameterRaster"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "changeratesincludeattributenamedchangerates": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 580.0, 
+                            "x": 105.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "changeratesincludeattributenamedchangerates", 
+                            "shapetype": [
+                                2
+                            ], 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Change Rates (include attribute named \"ChangeRates\" with data in m/year)"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "stormsurgeinmeters": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 445.0, 
+                            "x": 103.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "stormsurgeinmeters", 
+                            "min": null, 
+                            "default": 0.0, 
+                            "max": null, 
+                            "value": 0.0, 
+                            "hidden": false, 
+                            "isInteger": false, 
+                            "optional": false, 
+                            "description": "Storm surge (in metres)"
+                        }, 
+                        "class": "processing.core.parameters.ParameterNumber"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "localhs": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 670.0, 
+                            "x": 104.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "localhs", 
+                            "shapetype": [
+                                2
+                            ], 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": true, 
+                            "description": "Variable Hs (include attribute named \"Hs\" with data in m)"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "cellsizefordslassessment": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 495.0, 
+                            "x": 109.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "cellsizefordslassessment", 
+                            "min": null, 
+                            "default": 2, 
+                            "max": null, 
+                            "value": 2, 
+                            "hidden": false, 
+                            "isInteger": true, 
+                            "optional": false, 
+                            "description": "Cell size for DSL assessment (in m/px)"
+                        }, 
+                        "class": "processing.core.parameters.ParameterNumber"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "detachedstructures": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 61.0, 
+                            "x": 105.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "detachedstructures", 
+                            "shapetype": [
+                                1
+                            ], 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Detached Structures"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "globalhs": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 537.0, 
+                            "x": 104.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "globalhs", 
+                            "min": null, 
+                            "default": 0.0, 
+                            "max": null, 
+                            "value": 0.0, 
+                            "hidden": false, 
+                            "isInteger": false, 
+                            "optional": true, 
+                            "description": "Global Hs (in metres)"
+                        }, 
+                        "class": "processing.core.parameters.ParameterNumber"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "geomorphology": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 20.0, 
+                            "x": 105.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "geomorphology", 
+                            "showSublayersDialog": true, 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Geomorphology (1 to 5)"
+                        }, 
+                        "class": "processing.core.parameters.ParameterRaster"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "infrastructures1to5": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 186.0, 
+                            "x": 105.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "infrastructures1to5", 
+                            "showSublayersDialog": true, 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Infrastructures (1 to 5)"
+                        }, 
+                        "class": "processing.core.parameters.ParameterRaster"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "populationdensityinpersonskm2": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 227.0, 
+                            "x": 104.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "populationdensityinpersonskm2", 
+                            "showSublayersDialog": true, 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Population density (in persons/km2)"
+                        }, 
+                        "class": "processing.core.parameters.ParameterRaster"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "studyarea": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 306.0, 
+                            "x": 105.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "studyarea", 
+                            "shapetype": [
+                                2
+                            ], 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Study Area"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "localsealevelrise": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 716.0, 
+                            "x": 105.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "localsealevelrise", 
+                            "min": null, 
+                            "default": 0.0, 
+                            "max": null, 
+                            "value": 0.0, 
+                            "hidden": false, 
+                            "isInteger": false, 
+                            "optional": false, 
+                            "description": "Local Sea-Level Rise (in mm/year)"
+                        }, 
+                        "class": "processing.core.parameters.ParameterNumber"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "dem": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 402.0, 
+                            "x": 104.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "dem", 
+                            "showSublayersDialog": true, 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "DEM (in metres)"
+                        }, 
+                        "class": "processing.core.parameters.ParameterRaster"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }
+        }, 
+        "helpContent": {}, 
+        "group": "CERA2.0", 
+        "name": "CERA2.0", 
+        "algs": {
+            "MODELERCERA_GEOMETRIC_MEAN_INTEGER_3": {
+                "values": {
+                    "name": "MODELERCERA_GEOMETRIC_MEAN_INTEGER_3", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "Raster_to_int_ALGSCRIPTCALLFLOATTOINT1TO5_1": {
+                            "values": {
+                                "description": "Risk", 
+                                "pos": {
+                                    "values": {
+                                        "y": 611.0, 
+                                        "x": 1125.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 566.0, 
+                            "x": 925.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "raster2": {
+                            "values": {
+                                "alg": "MODELERCERA_GEOMETRIC_MEAN_INTEGER_2", 
+                                "output": "Raster_to_int_ALGSCRIPTCALLFLOATTOINT1TO5_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }, 
+                        "raster1": {
+                            "values": {
+                                "alg": "MODELERCERA_COASTAL_EROSION_1", 
+                                "output": "OUTPUT_ALGGDALOGRTRANSLATE_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:cera_geometric_mean_integer", 
+                    "description": "Risk"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "MODELERCERA_GEOMETRIC_MEAN_INTEGER_2": {
+                "values": {
+                    "name": "MODELERCERA_GEOMETRIC_MEAN_INTEGER_2", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "Raster_to_int_ALGSCRIPTCALLFLOATTOINT1TO5_1": {
+                            "values": {
+                                "description": "Consequence", 
+                                "pos": {
+                                    "values": {
+                                        "y": 435.0, 
+                                        "x": 1115.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 390.0, 
+                            "x": 915.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "raster2": {
+                            "values": {
+                                "alg": "MODELERCERA_GEOMETRIC_MEAN_INTEGER_1", 
+                                "output": "Raster_to_int_ALGSCRIPTCALLFLOATTOINT1TO5_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }, 
+                        "raster1": {
+                            "values": {
+                                "alg": "MODELERCERA_EXPOSURE_1", 
+                                "output": "Raster_to_int_ALGSCRIPTCALLFLOATTOINT1TO5_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:cera_geometric_mean_integer", 
+                    "description": "Consequence"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "MODELERCERA_GEOMETRIC_MEAN_INTEGER_1": {
+                "values": {
+                    "name": "MODELERCERA_GEOMETRIC_MEAN_INTEGER_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "Raster_to_int_ALGSCRIPTCALLFLOATTOINT1TO5_1": {
+                            "values": {
+                                "description": "Vulnerability", 
+                                "pos": {
+                                    "values": {
+                                        "y": 277.0, 
+                                        "x": 1117.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 232.0, 
+                            "x": 917.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "raster2": {
+                            "values": {
+                                "alg": "MODELERCERA_SUSCEPTIBILITY_1", 
+                                "output": "OUTPUT_ALGGDALOGRCLIPRASTERBYMASKLAYER_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }, 
+                        "raster1": {
+                            "values": {
+                                "alg": "MODELERCERA_VALUE_1", 
+                                "output": "Raster_to_int_ALGSCRIPTCALLFLOATTOINT1TO5_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:cera_geometric_mean_integer", 
+                    "description": "Vulnerability"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "MODELERCERA_EXPOSURE_1": {
+                "values": {
+                    "name": "MODELERCERA_EXPOSURE_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "Raster_to_int_ALGSCRIPTCALLFLOATTOINT1TO5_1": {
+                            "values": {
+                                "description": "Exposure", 
+                                "pos": {
+                                    "values": {
+                                        "y": 463.0, 
+                                        "x": 648.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 418.0, 
+                            "x": 448.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "cellsizefordslmap": {
+                            "values": {
+                                "name": "cellsizefordslassessment"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "shoreline": {
+                            "values": {
+                                "name": "shoreline"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "dem": {
+                            "values": {
+                                "name": "dem"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "stormsurgeinmeters": {
+                            "values": {
+                                "name": "stormsurgeinmeters"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "studyarea": {
+                            "values": {
+                                "name": "studyarea"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:cera_exposure", 
+                    "description": "Exposure Module"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "MODELERCERA_VALUE_1": {
+                "values": {
+                    "name": "MODELERCERA_VALUE_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "Raster_to_int_ALGSCRIPTCALLFLOATTOINT1TO5_1": {
+                            "values": {
+                                "description": "Value", 
+                                "pos": {
+                                    "values": {
+                                        "y": 306.0, 
+                                        "x": 648.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 261.0, 
+                            "x": 448.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "populationdensitypersonskm2": {
+                            "values": {
+                                "name": "populationdensityinpersonskm2"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "infrastructuresclassesfrom1to5": {
+                            "values": {
+                                "name": "infrastructures1to5"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "ecologyclasses1to3": {
+                            "values": {
+                                "name": "ecology1to3"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:cera_value", 
+                    "description": "Value Module"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "MODELERCERA_COASTAL_EROSION_1": {
+                "values": {
+                    "name": "MODELERCERA_COASTAL_EROSION_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "OUTPUT_ALGGDALOGRTRANSLATE_1": {
+                            "values": {
+                                "description": "Coastal Erosion", 
+                                "pos": {
+                                    "values": {
+                                        "y": 698.0, 
+                                        "x": 643.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 653.0, 
+                            "x": 443.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "numberofstorms": {
+                            "values": {
+                                "name": "numberofstorms"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "changeratesincludeattributenamedchangerate": {
+                            "values": {
+                                "name": "changeratesincludeattributenamedchangerates"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "generalhs": {
+                            "values": {
+                                "name": "globalhs"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "localslr": {
+                            "values": {
+                                "name": "localsealevelrise"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "studyarea": {
+                            "values": {
+                                "name": "studyarea"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "variablehsvectorcoveringthestudyarea": {
+                            "values": {
+                                "name": "localhs"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:cera_coastal_erosion", 
+                    "description": "Coastal Erosion Module"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "MODELERCERA_SUSCEPTIBILITY_1": {
+                "values": {
+                    "name": "MODELERCERA_SUSCEPTIBILITY_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "OUTPUT_ALGGDALOGRCLIPRASTERBYMASKLAYER_1": {
+                            "values": {
+                                "description": "Susceptibility", 
+                                "pos": {
+                                    "values": {
+                                        "y": 149.0, 
+                                        "x": 649.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 104.0, 
+                            "x": 449.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "geomorphology": {
+                            "values": {
+                                "name": "geomorphology"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "seawalls": {
+                            "values": {
+                                "name": "attachedstructures"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "detachedstructuresiedetachedbreakwaters": {
+                            "values": {
+                                "name": "detachedstructures"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "groyneslinecrossingthestudyarea": {
+                            "values": {
+                                "name": "pependicularstrucutures"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "studyarea": {
+                            "values": {
+                                "name": "studyarea"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:cera_susceptibility", 
+                    "description": "Suscetibility Module"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }
+        }
+    }, 
+    "class": "processing.modeler.ModelerAlgorithm.ModelerAlgorithm"
+}
