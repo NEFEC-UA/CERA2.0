@@ -1,0 +1,316 @@
+{
+    "values": {
+        "inputs": {
+            "cellsizefordslmap": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 560.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "cellsizefordslmap", 
+                            "min": null, 
+                            "default": 2, 
+                            "max": null, 
+                            "value": 2, 
+                            "hidden": false, 
+                            "isInteger": true, 
+                            "optional": false, 
+                            "description": "Cell size for DSL map"
+                        }, 
+                        "class": "processing.core.parameters.ParameterNumber"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "shoreline": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 120.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "shoreline", 
+                            "shapetype": [
+                                1
+                            ], 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Shoreline"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "studyarea": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 340.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "studyarea", 
+                            "shapetype": [
+                                2
+                            ], 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Study Area"
+                        }, 
+                        "class": "processing.core.parameters.ParameterVector"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "stormsurgeinmeters": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 1000.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "stormsurgeinmeters", 
+                            "min": null, 
+                            "default": 0.78, 
+                            "max": null, 
+                            "value": 0.78, 
+                            "hidden": false, 
+                            "isInteger": false, 
+                            "optional": false, 
+                            "description": "Storm Surge (in meters)"
+                        }, 
+                        "class": "processing.core.parameters.ParameterNumber"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "dem": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 780.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "dem", 
+                            "showSublayersDialog": true, 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "DEM"
+                        }, 
+                        "class": "processing.core.parameters.ParameterRaster"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }
+        }, 
+        "helpContent": {}, 
+        "group": "CERA2.0", 
+        "name": "Exposure Module", 
+        "algs": {
+            "SCRIPTCEXPTOPOGRAPHYDSL_1": {
+                "values": {
+                    "name": "SCRIPTCEXPTOPOGRAPHYDSL_1", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 262.0, 
+                            "x": 329.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "Topography_SS_class": {
+                            "values": {
+                                "alg": "SCRIPTCEXPTOPOGRAPHYSS_1", 
+                                "output": "Topography_SS"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }, 
+                        "Distance_to_shoreline_class": {
+                            "values": {
+                                "alg": "MODELERCERA_DSL_CLASS_1", 
+                                "output": "OUTPUT_ALGGDALOGRCLIPRASTERBYMASKLAYER_1"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "script:cexptopographydsl", 
+                    "description": "[CExp] Topography + DSL"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "SCRIPTCEXPTOPOGRAPHYSS_1": {
+                "values": {
+                    "name": "SCRIPTCEXPTOPOGRAPHYSS_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "Topography_SS": {
+                            "values": {
+                                "description": "Top_SS", 
+                                "pos": {
+                                    "values": {
+                                        "y": 207.0, 
+                                        "x": 980.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 162.0, 
+                            "x": 780.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "Topography": {
+                            "values": {
+                                "name": "dem"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "Expected_Storm_Surge_in_meters": {
+                            "values": {
+                                "name": "stormsurgeinmeters"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "script:cexptopographyss", 
+                    "description": "[CExp] Topography+SS"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "SCRIPTCALLFLOATTOINT1TO5_1": {
+                "values": {
+                    "name": "SCRIPTCALLFLOATTOINT1TO5_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "Raster_to_int": {
+                            "values": {
+                                "description": "Coastal Exposure", 
+                                "pos": {
+                                    "values": {
+                                        "y": 385.0, 
+                                        "x": 757.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 340.0, 
+                            "x": 557.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "Raster_in_float": {
+                            "values": {
+                                "alg": "SCRIPTCEXPTOPOGRAPHYDSL_1", 
+                                "output": "Coastal_Exposure"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "script:callfloattoint1to5", 
+                    "description": "[CAll] Float to Int (1 to 5)"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "MODELERCERA_DSL_CLASS_1": {
+                "values": {
+                    "name": "MODELERCERA_DSL_CLASS_1", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 169.0, 
+                            "x": 128.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "additionalextent": 500.0, 
+                        "shoreline": {
+                            "values": {
+                                "name": "shoreline"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "studyarea": {
+                            "values": {
+                                "name": "studyarea"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "cellsize": {
+                            "values": {
+                                "name": "cellsizefordslmap"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "modeler:cera_dsl_class", 
+                    "description": "DSL class [EM]"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }
+        }
+    }, 
+    "class": "processing.modeler.ModelerAlgorithm.ModelerAlgorithm"
+}

@@ -1,0 +1,264 @@
+{
+    "values": {
+        "inputs": {
+            "populationdensitypersonskm2": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 340.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "populationdensitypersonskm2", 
+                            "showSublayersDialog": true, 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Population density (persons/km2)"
+                        }, 
+                        "class": "processing.core.parameters.ParameterRaster"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "infrastructuresclassesfrom1to5": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 120.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "infrastructuresclassesfrom1to5", 
+                            "showSublayersDialog": true, 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Infrastructures (classes 1 to 5)"
+                        }, 
+                        "class": "processing.core.parameters.ParameterRaster"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }, 
+            "ecologyclasses1to3": {
+                "values": {
+                    "pos": {
+                        "values": {
+                            "y": 60.0, 
+                            "x": 560.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "param": {
+                        "values": {
+                            "isAdvanced": false, 
+                            "name": "ecologyclasses1to3", 
+                            "showSublayersDialog": true, 
+                            "default": null, 
+                            "value": null, 
+                            "exported": null, 
+                            "hidden": false, 
+                            "optional": false, 
+                            "description": "Ecology (classes 1 to 3)"
+                        }, 
+                        "class": "processing.core.parameters.ParameterRaster"
+                    }
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.ModelerParameter"
+            }
+        }, 
+        "helpContent": {}, 
+        "group": "CERA2.0", 
+        "name": "Value Module", 
+        "algs": {
+            "SCRIPTCVALPOPULATIONDENSITY_1": {
+                "values": {
+                    "name": "SCRIPTCVALPOPULATIONDENSITY_1", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 147.0, 
+                            "x": 340.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "Population_density": {
+                            "values": {
+                                "name": "populationdensitypersonskm2"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "Class_2_max": 1000.0, 
+                        "Class_1_max": 500.0, 
+                        "Class_4_max": 4000.0, 
+                        "Class_3_max": 2000.0
+                    }, 
+                    "active": true, 
+                    "consoleName": "script:cvalpopulationdensity", 
+                    "description": "[CVal] Population Density"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "SCRIPTCVALLIMITTOCLASS5_1": {
+                "values": {
+                    "name": "SCRIPTCVALLIMITTOCLASS5_1", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 450.0, 
+                            "x": 780.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "CValue": {
+                            "values": {
+                                "alg": "SCRIPTCVALPOPDENINFECO_1", 
+                                "output": "Coastal_Value"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "script:cvallimittoclass5", 
+                    "description": "[CVal] Limit to class 5"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "SCRIPTCALLFLOATTOINT1TO5_1": {
+                "values": {
+                    "name": "SCRIPTCALLFLOATTOINT1TO5_1", 
+                    "paramsFolded": true, 
+                    "outputs": {
+                        "Raster_to_int": {
+                            "values": {
+                                "description": "Coastal Value", 
+                                "pos": {
+                                    "values": {
+                                        "y": 595.0, 
+                                        "x": 1200.0
+                                    }, 
+                                    "class": "point"
+                                }
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ModelerOutput"
+                        }
+                    }, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 550.0, 
+                            "x": 1000.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "Raster_in_float": {
+                            "values": {
+                                "alg": "SCRIPTCVALLIMITTOCLASS5_1", 
+                                "output": "Value_class"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "script:callfloattoint1to5", 
+                    "description": "[CAll] Float to Int (1 to 5)"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "SCRIPTCVALPOPULATIONINFRASTRUCTURES_1": {
+                "values": {
+                    "name": "SCRIPTCVALPOPULATIONINFRASTRUCTURES_1", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 247.0, 
+                            "x": 342.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "Population_density": {
+                            "values": {
+                                "alg": "SCRIPTCVALPOPULATIONDENSITY_1", 
+                                "output": "Population_class"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }, 
+                        "Infrastructures": {
+                            "values": {
+                                "name": "infrastructuresclassesfrom1to5"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "script:cvalpopulationinfrastructures", 
+                    "description": "[CVal] Population + Infrastructures"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
+            "SCRIPTCVALPOPDENINFECO_1": {
+                "values": {
+                    "name": "SCRIPTCVALPOPDENINFECO_1", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 350.0, 
+                            "x": 560.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "Ecology": {
+                            "values": {
+                                "name": "ecologyclasses1to3"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "PopdenInf": {
+                            "values": {
+                                "alg": "SCRIPTCVALPOPULATIONINFRASTRUCTURES_1", 
+                                "output": "Infrastructures_Population"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "script:cvalpopdeninfeco", 
+                    "description": "[CVal] PopdenInf + Eco"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }
+        }
+    }, 
+    "class": "processing.modeler.ModelerAlgorithm.ModelerAlgorithm"
+}
