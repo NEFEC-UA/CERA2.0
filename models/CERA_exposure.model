@@ -142,6 +142,40 @@
         "group": "CERA2.0", 
         "name": "Exposure Module", 
         "algs": {
+            "SCRIPTCEXPTOPOGRAPHYSSEXACTVALUE_1": {
+                "values": {
+                    "name": "SCRIPTCEXPTOPOGRAPHYSSEXACTVALUE_1", 
+                    "paramsFolded": true, 
+                    "outputs": {}, 
+                    "outputsFolded": true, 
+                    "pos": {
+                        "values": {
+                            "y": 189.0, 
+                            "x": 919.0
+                        }, 
+                        "class": "point"
+                    }, 
+                    "dependencies": [], 
+                    "params": {
+                        "Topography": {
+                            "values": {
+                                "name": "dem"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }, 
+                        "Expected_Storm_Surge_in_meters": {
+                            "values": {
+                                "name": "stormsurgeinmeters"
+                            }, 
+                            "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
+                        }
+                    }, 
+                    "active": true, 
+                    "consoleName": "script:cexptopographyssexactvalue", 
+                    "description": "[CExp] Topography+SS_exact_value"
+                }, 
+                "class": "processing.modeler.ModelerAlgorithm.Algorithm"
+            }, 
             "SCRIPTCEXPTOPOGRAPHYDSL_1": {
                 "values": {
                     "name": "SCRIPTCEXPTOPOGRAPHYDSL_1", 
@@ -150,8 +184,8 @@
                     "outputsFolded": true, 
                     "pos": {
                         "values": {
-                            "y": 262.0, 
-                            "x": 329.0
+                            "y": 270.0, 
+                            "x": 341.0
                         }, 
                         "class": "point"
                     }, 
@@ -159,7 +193,7 @@
                     "params": {
                         "Topography_SS_class": {
                             "values": {
-                                "alg": "SCRIPTCEXPTOPOGRAPHYSS_1", 
+                                "alg": "SCRIPTCEXPTOPOGRAPHYSSEXACTVALUE_1", 
                                 "output": "Topography_SS"
                             }, 
                             "class": "processing.modeler.ModelerAlgorithm.ValueFromOutput"
@@ -188,8 +222,8 @@
                                 "description": "Top_SS", 
                                 "pos": {
                                     "values": {
-                                        "y": 207.0, 
-                                        "x": 980.0
+                                        "y": 161.0, 
+                                        "x": 1603.0
                                     }, 
                                     "class": "point"
                                 }
@@ -200,8 +234,8 @@
                     "outputsFolded": true, 
                     "pos": {
                         "values": {
-                            "y": 162.0, 
-                            "x": 780.0
+                            "y": 144.0, 
+                            "x": 1396.0
                         }, 
                         "class": "point"
                     }, 
@@ -220,7 +254,7 @@
                             "class": "processing.modeler.ModelerAlgorithm.ValueFromInput"
                         }
                     }, 
-                    "active": true, 
+                    "active": false, 
                     "consoleName": "script:cexptopographyss", 
                     "description": "[CExp] Topography+SS"
                 }, 
